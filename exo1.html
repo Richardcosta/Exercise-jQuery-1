@@ -1,0 +1,28 @@
+<!-- au clic sur un bouton "faire apparaître" : un div de couleur apparait en fondu en 1s, puis au bout d'1s disparaît en fondu en 1s -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>exercise 6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  $(document).ready(function(){
+      $("button").click(function(){
+            $("#div1").fadeIn(1500).delay(800);
+          $("#button").fadeOut(1500).delay(800);
+            $("#div1").fadeOut(1200);
+          $("#button").fadeIn(1500);
+      });
+  });
+
+  </script>
+</head>
+<body>
+
+<button id="button">Click Me</button><br><br>
+
+<div id="div1" style="width:480px;height:480px;display:none;background-color:red;"></div>
+
+</body>
+</html>

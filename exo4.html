@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drag me</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+  #draggable { width: 100px;
+    height: 100px;
+    padding: 0.5em;
+    background-color: black;}
+
+    .long {
+      width: 120px;
+      height: 600px;
+      position: relative;
+      background-color: green;
+    }
+
+    </style>
+    <script>
+
+    $( function() {
+      $( "#draggable" ).draggable({
+        revert: true,
+        axis: "y",
+        containment: "parent",
+        stop: function(){alert("Stop shaking me!!!");},
+      });
+    });
+    </script>
+
+  </head>
+  <body>
+    <div class="long">
+      <div id="draggable" class="ui-widget-content"></div>
+    </div>
+
+
+
+
+  </body>
+  </html>
